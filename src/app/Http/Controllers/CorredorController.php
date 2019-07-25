@@ -16,7 +16,7 @@ class CorredorController extends Controller
      */
     public function index()
     {
-        return CorredorResource::collection(Corredor::all())
+        return CorredorResource::collection(Corredor::orderBy('data_nascimento')->get())
             ->response()
             ->setStatusCode(Response::HTTP_OK);
     }

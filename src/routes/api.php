@@ -18,3 +18,6 @@ Route::resource('provas', 'ProvaController');
 
 Route::post('corredores-provas', 'CorredorController@provas');
 Route::post('corredores-resultados', 'CorredorController@resultados');
+
+Route::get('listagem-provas-idade', 'ListagemController@provasIdade');
+Route::get('listagem-provas-gerais', 'ListagemController@provasGerais');

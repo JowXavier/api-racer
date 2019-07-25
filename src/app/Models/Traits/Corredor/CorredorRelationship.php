@@ -24,6 +24,11 @@ trait CorredorRelationship
      */
     public function resultados()
     {
-        return $this->belongsToMany(Prova::class, 'resultados', 'corredor_id', 'prova_id');
+        return $this->belongsToMany(Prova::class, 'resultados', 'corredor_id', 'prova_id')
+            ->withPivot([
+                'hora_inicio',
+                'hora_fim'
+            ]
+        );
     }
 }
